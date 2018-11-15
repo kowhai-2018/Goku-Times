@@ -31,8 +31,8 @@ import request from 'superagent'
     render() {
       return (
         <React.Fragment>
-          <h3>{this.state.xkcd.title}</h3>
-          <h4>{this.state.xkcd.subtitle}</h4>
+          <h1>{this.state.xkcd.title}</h1>
+          <h3>{this.state.xkcd.subtitle}</h3>
           <img src= {this.state.xkcd.comic}/>
         </React.Fragment>
       )}

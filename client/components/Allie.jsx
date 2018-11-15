@@ -37,9 +37,9 @@ import request from 'superagent'
     render() {
       return (
         <React.Fragment>
-          <h3>The top news in NZ today is: </h3>
-          <h4>{this.state.news.title}</h4>
-          <h5>{this.state.news.description}</h5>
+          <h1>NZ News: </h1>
+          <h2>{this.state.news.title}</h2>
+          <h4>{this.state.news.description}</h4>
           <p>News sourced from {this.state.news.agent}</p>
           <p>{this.state.news.content}</p>
         </React.Fragment>

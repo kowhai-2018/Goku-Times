@@ -2,7 +2,6 @@ import React from 'react'
 import Chris from './Chris'
 import Allie from './Allie'
 import Dani from './Dani'
-
 import Carel from './Carel'
 
 

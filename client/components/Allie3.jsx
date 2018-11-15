@@ -22,7 +22,7 @@ import request from 'superagent'
     .then(res => {
       this.setState({
         horoscope: {
-        sign: this.state.horoscope.sign,
+          sign: this.state.horoscope.sign,
           date: res.body.date_range,
           description: res.body.description
         }

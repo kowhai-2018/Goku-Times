@@ -6,15 +6,17 @@ import request from 'superagent'
     json: {}
   }
   componentDidMount(){
-    this.getHoroscope
+    this.setState({json:{color:'blue'}})
+    this.getHoroscope()
   }
 
   getHoroscope(){
-    const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
+    const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today'
        
     request
-    .get(this.state.url)
-    .then( res => {
+    .post(URL)
+    .then(res => {
+      console.log(res)
       res.json()
     })
     .then(json => {

@@ -24,6 +24,6 @@ import request from 'superagent'
     render() {
         return (
           <h1>this is Dani's component</h1>
-        )}
+    )}
 }
 

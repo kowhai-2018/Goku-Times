@@ -3,27 +3,45 @@ import request from 'superagent'
 
  export default class Allie extends React.Component {
   state = {
-    key: 'property'
+    news: {
+      newsURL: 'https://newsapi.org/v2/top-headlines',
+      title: '',
+      description: '',
+      author: '',
+      agent: '',
+      content: ''
+    }
   }
   componentDidMount(){
-    // this.callfunction
+    this.getNews()
   }
 
-  callfunction(){
-    request
-    .get(this.state.network.urlIP)
-    .then( res => {
+  getNews(){
+    var newsUrl1 = 'https://newsapi.org/v2/top-headlines?' +
+          'country=nz&' +
+          'apiKey=855e439c689c484b9818556631826045'
+    request.get(newsUrl1)
+    .then(res => {
       this.setState({
-        network: {
-          ip: res.body.ip,
-          urlLocation: 'https://geo.ipify.org/api/v1?apiKey='+ this.state.network.apiK + '&ipAddress=' + res.body.ip
+        news: {
+          title: res.body.articles[0].title,
+          description: res.body.articles[0].description,
+          agent: res.body.articles[0].source.name,
+          content: res.body.articles[0].content
+          
         }
       })
     })
-  }
-    render() {
-        return (
-          <h1>this is Allie's component</h1>
-        )}
-}
+  }   
 
+    render() {
+      return (
+        <React.Fragment>
+          <h3>The top news in NZ today is: </h3>
+          <h4>{this.state.news.title}</h4>
+          <h5>{this.state.news.description}</h5>
+          <p>News sourced from {this.state.news.agent}</p>
+          <p>{this.state.news.content}</p>
+        </React.Fragment>
+      )}
+    }

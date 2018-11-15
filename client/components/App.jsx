@@ -17,7 +17,7 @@ import Carel from './Carel'
       <Carel />
       <Allie />
       <Allie2 />
-      <Allie3 />
+      {/* <Allie3 /> */}
       <Dani />
     </React.Fragment>
   )}

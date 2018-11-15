@@ -3,39 +3,48 @@ import request from 'superagent'
 
  export default class Dani extends React.Component {
   state = {
-    json: {}
+    horoscope: {
+      URL: 'https://aztro.sameerkumar.website',
+      signs: ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'],
+      sign:'',
+      date: '',
+      description: ''
+    }
   }
+  
   componentDidMount(){
-    this.setState({json:{color:'blue'}})
-    this.getHoroscope()
+    //this.getHoroscope()
   }
 
-  getHoroscope(){
-    const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today'
-       
-    request
-    .post(URL)
+  getHoroscope(sign){
+    const {URL} = this.state.horoscope
+    const url = URL + '?sign=' + sign + '&day=today'
+    request.post(url)
     .then(res => {
-      console.log(res)
-      res.json()
+      this.setState({
+        horoscope: {
+        sign: sign,
+          date: res.body.date_range,
+          description: res.body.description
+        }
+      })
     })
-    .then(json => {
-      console.log(json)
-      this.setState({json}) 
-    })
-  }
+  }   
+
     render() {
-        return (
-          <React.Fragment>
-          Current Date: {this.state.json.current_date} <br />
-          Compatibility: {this.state.json.compatibility} <br />
-          Lucky Number: {this.state.json.lucky_number} <br />
-          Lucky Time: {this.state.json.lucky_time} <br />
-          Color: {this.state.json.color} <br />
-          Date Range: {this.state.json.date_range} <br />
-          Mood: {this.state.json.mood} <br />
-          Description: {this.state.json.description} <br />
-      </React.Fragment>
-        )}
+      return (
+        <React.Fragment>
+          {this.state.signs.map(sign => {
+            this.getHoroscope(sign)
+            <div>
+              <h3>Horoscope for {this.state.horoscope.sign} ({this.state.horoscope.date})</h3>
+              <p>{this.state.horoscope.description}</p>
+            </div>
+          })}
+          
+          {/* <h3>Horoscope for {this.state.horoscope.sign} ({this.state.horoscope.date})</h3>
+          <p>{this.state.horoscope.description}</p> */}
+        </React.Fragment>
+      )}
 }
 

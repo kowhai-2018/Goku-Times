@@ -14,14 +14,14 @@ export default class App extends React.Component {
           <div className="row">
             <center>
               <div className="col l12">
-                <h1>The Goku Times</h1>
+                <h1 className="title">The Goku Times</h1>
               </div>
             </center>
           </div>
           <div className="row">
-          <hr/>
-          Issue 9,001
-          <hr/>
+            <hr/>
+          <strong>Issue 9,001</strong> - Friday, 16 November 2018
+            <hr/>
           </div>
           <div className="row">
             <div className="col l8">

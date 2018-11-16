@@ -34,10 +34,7 @@ export default class Allie3 extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h3>
-          {this.props.sign} {this.state.horoscope.sign} (
-          {this.state.horoscope.date})
-        </h3>
+        <h6>{this.props.sign} - ({this.state.horoscope.date})</h6> 
         <p>{this.state.horoscope.description}</p>
       </React.Fragment>
     )

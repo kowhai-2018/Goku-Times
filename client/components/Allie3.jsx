@@ -59,7 +59,8 @@ export default class Allie3 extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Horoscopoes</h1>
+        <hr/>
+        <h3>Horoscopes </h3>
         {this.state.signs.map(s => {
           return <Horoscopes sign={s.sign} key={s.id} />
         })}

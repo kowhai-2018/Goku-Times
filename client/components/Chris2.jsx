@@ -25,6 +25,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
+        <hr/>
+        <h2>Joke of the day</h2>
         <p>{this.state.events}</p>
       </div>
     )

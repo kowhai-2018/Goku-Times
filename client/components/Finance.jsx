@@ -61,35 +61,26 @@ import request from 'superagent'
     render() {
         return (
           <React.Fragment>
-            <h1>Finance Times</h1>
+            <h2>Finance Times</h2>
             <div>
-              <h2>{this.state.news.article1.title}</h2>
+              <h5>{this.state.news.article1.title}</h5>
                 <p>{this.state.news.article1.content}</p>
-                <img src={this.state.news.article1.urlToImage} alt='news-image' />
             </div>
             <div>
-              <h2>{this.state.news.article2.title}</h2>
+              <h5>{this.state.news.article2.title}</h5>
                 <p>{this.state.news.article2.content}</p>
-                <img src={this.state.news.article2.urlToImage} alt='news-image' />
-
             </div>
             <div>
-              <h2>{this.state.news.article3.title}</h2>
+              <h5>{this.state.news.article3.title}</h5>
                 <p>{this.state.news.article3.content}</p>
-                <img src={this.state.news.article3.urlToImage} alt='news-image' />
-
             </div>
             <div>
-              <h2>{this.state.news.article4.title}</h2>
+              <h5>{this.state.news.article4.title}</h5>
                 <p>{this.state.news.article4.content}</p>
-                <img src={this.state.news.article4.urlToImage} alt='news-image' />
-
             </div>
             <div>
-              <h2>{this.state.news.article5.title}</h2>
+              <h5>{this.state.news.article5.title}</h5>
                 <p>{this.state.news.article5.content}</p>
-                <img src={this.state.news.article5.urlToImage} alt='news-image' />
-
             </div>
             
           </React.Fragment>

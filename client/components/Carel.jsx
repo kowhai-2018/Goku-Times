@@ -73,7 +73,7 @@ import request from 'superagent'
     render() {
         return (
           <React.Fragment>
-            <h1>Weather</h1>
+            <h2>Weather</h2>
             <p>Today the weather in <strong>{this.state.network.location}</strong> is currently <strong>{this.state.weather.currentCondition}</strong> and the temperature is <strong>{this.state.weather.tempInC} °C</strong>
               <img src={this.state.weather.currentIcon} alt='weather icon'></img></p>
             <p>Tomorrow the temperature is going to be between <strong>{this.state.weather.mintempTomorrow} °C and {this.state.weather.temptomorrow} °C</strong></p>

@@ -1,40 +1,69 @@
 import React from 'react'
-import request from 'superagent'
+import Horoscopes from './Horoscopes'
 
- export default class Allie3 extends React.Component {
+export default class Allie3 extends React.Component {
   state = {
-    horoscope: {
-      URL: 'https://aztro.sameerkumar.website',
-      sign: 'cancer',
-      date: '',
-      description: ''
-    }
+    signs: [
+      {
+        id: 1,
+        sign: 'Aries'
+      },
+      {
+        id: 2,
+        sign: 'Taurus'
+      },
+      {
+        id: 3,
+        sign: 'Gemini'
+      },
+      {
+        id: 4,
+        sign: 'Cancer'
+      },
+      {
+        id: 5,
+        sign: 'Leo'
+      },
+      {
+        id: 6,
+        sign: 'Virgo'
+      },
+      {
+        id: 7,
+        sign: 'Libra'
+      },
+      {
+        id: 8,
+        sign: 'Scorpio'
+      },
+      {
+        id: 9,
+        sign: 'Sagittarius'
+      },
+      {
+        id: 10,
+        sign: 'Capricorn'
+      },
+      {
+        id: 11,
+        sign: 'Aquarius'
+      },
+      {
+        id: 12,
+        sign: 'Pisces'
+      }
+    ]
   }
   
-  componentDidMount(){
-    this.getHoroscope()
+
+  render() {
+    return (
+      <React.Fragment>
+        <h1>Horoscopoes</h1>
+        {this.state.signs.map(s => {
+          return <Horoscopes sign={s.sign} key={s.id} />
+        })}
+      </React.Fragment>
+    )
   }
-
-  getHoroscope(){
-    const {URL, sign} = this.state.horoscope
-    const url = URL + '?sign=' + sign + '&day=today'
-    request.post(url)
-    .then(res => {
-      this.setState({
-        horoscope: {
-          sign: this.state.horoscope.sign,
-          date: res.body.date_range,
-          description: res.body.description
-        }
-      })
-    })
-  }   
-
-    render() {
-      return (
-        <React.Fragment>
-          <h3>Horoscope for {this.state.horoscope.sign} ({this.state.horoscope.date})</h3>
-          <p>{this.state.horoscope.description}</p>
-        </React.Fragment>
-      )}
-    }
+}

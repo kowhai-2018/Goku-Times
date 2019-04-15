@@ -1,7 +1,7 @@
 import React from 'react'
 import request from 'superagent'
 
- export default class Allie2 extends React.Component {
+ export default class Xkcd extends React.Component {
   state = {
     xkcd: {
       URL: 'https://xkcd.now.sh',

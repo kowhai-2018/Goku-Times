@@ -1,7 +1,7 @@
 import React from 'react'
 import request from 'superagent'
 
-export default class Allie3 extends React.Component {
+export default class Horoscopes extends React.Component {
   state = {
     horoscope: {
       URL: 'https://aztro.sameerkumar.website',

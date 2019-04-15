@@ -1,7 +1,7 @@
 import React from 'react'
 import Horoscopes from './Horoscopes'
 
-export default class Allie3 extends React.Component {
+export default class Horoscpoe extends React.Component {
   state = {
     signs: [
       {

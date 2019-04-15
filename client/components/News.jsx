@@ -1,7 +1,7 @@
 import React from 'react'
 import request from 'superagent'
 
- export default class Allie extends React.Component {
+ export default class News extends React.Component {
   state = {
       newsURL: 'https://newsapi.org/v2/top-headlines',
       news:{

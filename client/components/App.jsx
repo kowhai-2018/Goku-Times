@@ -1,9 +1,9 @@
 import React from 'react'
-import GeekJokes from './Chris'
-import News from './Allie'
-import Xkcd from './Allie2'
-import Horoscopes from './Allie3'
-import Weather from './Carel'
+import GeekJokes from './GeekJokes'
+import News from './News'
+import Xkcd from './Xkcd'
+import Horoscopes from './Horoscope'
+import Weather from './Weather'
 import Finance from './Finance'
 
 export default class App extends React.Component {

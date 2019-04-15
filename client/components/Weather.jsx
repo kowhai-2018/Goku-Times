@@ -1,7 +1,7 @@
 import React from 'react'
 import request from 'superagent'
 
-  export default class Carel extends React.Component {
+  export default class Weather extends React.Component {
     state = {
       weather: {
         apiK: '6632adbe463749a3ad3221126181311',

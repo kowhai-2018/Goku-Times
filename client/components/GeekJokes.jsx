@@ -6,7 +6,7 @@ export default class GeekJokes extends React.Component {
     geekJokes: ''
   }
 
-  componentDidMount() {
+  componentDidMount () {
     request
       .get('https://geek-jokes.sameerkumar.website/api')
       .then(res => {
@@ -17,7 +17,7 @@ export default class GeekJokes extends React.Component {
       })
   }
 
-  render() {
+  render () {
     return (
       <div>
         <hr/>

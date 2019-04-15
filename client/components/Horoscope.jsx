@@ -54,9 +54,8 @@ export default class Horoscpoe extends React.Component {
       }
     ]
   }
-  
 
-  render() {
+  render () {
     return (
       <React.Fragment>
         <hr/>

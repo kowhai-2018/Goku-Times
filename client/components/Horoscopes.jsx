@@ -10,11 +10,11 @@ export default class Horoscopes extends React.Component {
       description: ''
     }
   }
-  componentDidMount() {
+  componentDidMount () {
     this.getHoroscope()
   }
 
-  getHoroscope() {
+  getHoroscope () {
     const url =
       'https://aztro.sameerkumar.website' +
       '?sign=' +
@@ -31,10 +31,10 @@ export default class Horoscopes extends React.Component {
     })
   }
 
-  render() {
+  render () {
     return (
       <React.Fragment>
-        <h6>{this.props.sign} - ({this.state.horoscope.date})</h6> 
+        <h6>{this.props.sign} - ({this.state.horoscope.date})</h6>
         <p>{this.state.horoscope.description}</p>
       </React.Fragment>
     )

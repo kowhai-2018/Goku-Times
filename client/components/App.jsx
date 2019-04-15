@@ -20,7 +20,7 @@ export default class App extends React.Component {
           </div>
           <div className="row">
             <hr/>
-          <strong>Issue 9,001</strong> - Friday, 16 November 2018
+            <strong>Issue 9,001</strong> - Friday, 16 November 2018
             <hr/>
           </div>
           <div className="row">
